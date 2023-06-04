@@ -1,10 +1,10 @@
 import React, { Children } from 'react'
-
+import "./Main.css";
 function Main(props) {
     const children = props.children;
     console.log("children de Main", children)
   return (
-    <div>{...children}</div>
+    <div className='main'>{...children}</div>
   )
 }
 

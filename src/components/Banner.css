@@ -6,7 +6,7 @@
     padding-inline: 2rem;
     background-image: url("https://unsplash.it/800/200");
     min-height: 140px;
-    max-width: 80vw;
+    max-width:100%;
     margin: auto;
     border-radius: 2rem;
     display: grid;
