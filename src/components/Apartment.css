@@ -9,6 +9,13 @@
     min-height: 200px;
 }
 
+.apartment a{
+text-decoration: none;
+color:#ff6060;
+
+}
+
+
 @media screen and (width <= 768px){ 
     .apartment{
         flex-basis: 100%;
