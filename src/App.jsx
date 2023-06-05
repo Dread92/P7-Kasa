@@ -4,7 +4,7 @@ import "./App.css";
 import Banner from './components/Banner.jsx';
 import ApartmentsGrid from './components/ApartmentsGrid.jsx';
 import Main from './components/Main.jsx';
-
+import Footer from './components/Footer.jsx';
 function App() {
   return (
     <div>
@@ -13,6 +13,7 @@ function App() {
        <Banner/>
        <ApartmentsGrid/>
        </Main>
+       <Footer/>
     </div>
   )
 }
