@@ -1,6 +1,6 @@
 import React from 'react';
-import "./ApartmentsGrid.css";
-import Apartment from './Apartment.jsx'
+import "./ApartmentsGrid.scss";
+import Apartment from './ApartmentCard.jsx'
 
 function ApartmentsGrid() {
   return (

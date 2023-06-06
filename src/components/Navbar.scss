@@ -1,0 +1,29 @@
+@import "../scss_variables/variables.scss";
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    color: $color-primary;
+    font-weight: 700;
+    gap:2rem;
+
+    /* enfants directs de Navbar*/
+    & > *:first-child{
+    margin-right:auto;
+}
+
+    & a{
+        text-decoration: none;
+        color:$color-primary;
+        &.active {/* on prend une classe active grâce aux Navlink*/
+            text-decoration: underline;
+        }
+        &:hover{
+            text-decoration: underline;
+        }
+        }
+}
+
+

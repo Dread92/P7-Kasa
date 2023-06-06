@@ -11,8 +11,6 @@ export const router = createBrowserRouter([
         element:(
         <>   
         <App/>
-        <Navbar/>
-        <Footer/>
         </>
         ),
         errorElement: <h1>404 not found</h1>
