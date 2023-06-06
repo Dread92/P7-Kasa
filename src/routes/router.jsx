@@ -1,40 +1,42 @@
 import React from 'react';
-import { createBrowserRouter } from 'react-router-dom'; //https://reactrouter.com/en/main/start/tutorial
-import App from '../App';
-import Footer from '../components/Footer';
+import { createBrowserRouter, Outlet } from 'react-router-dom'; //https://reactrouter.com/en/main/start/tutorial
+import HomePage from '../pages/Homepage';
+import Footer from '../layout/Footer';
 import Navbar from '../components/Navbar';
+import Main from '../layout/Main';
+
+
+const HeaderFooterCombo = () => {
+  return(
+  <>
+    <Navbar/>
+    <Main>
+    <Outlet/>
+    </Main>
+    <Footer/>
+  </>
+  );
+};
+
 
 
 export const router = createBrowserRouter([
-    {
+  {
+    element: <HeaderFooterCombo />,
+    errorElement: <h1>404 not found</h1>,
+    children: [
+      {
         path: "/",
-        element:(
-        <>   
-        <App/>
-        </>
-        ),
-        errorElement: <h1>404 not found</h1>
+        element: <HomePage/>
       },
       {
         path: "/apartments",
-        element:(
-            <>
-            <Navbar/>
-            <h1>Nos appartements</h1>
-            <Footer/>
-            </>
-            )
+        element: <h1>Appartements</h1> 
       },
       {
         path: "/about",
-        element:(
-        <>
-        <Navbar/>
-        <h1>A propos</h1>
-        <Footer/>
-        </>
-        )
-      },
-    
-])
-
+        element: <h1>A propos</h1> 
+      }
+    ]
+  }
+]);
