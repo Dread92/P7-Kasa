@@ -4,7 +4,7 @@ import HomePage from '../pages/Homepage';
 import Footer from '../layout/Footer';
 import Navbar from '../components/Navbar';
 import Main from '../layout/Main';
-
+import ApartmentsPage from '../pages/ApartmentsPage';
 
 const HeaderFooterCombo = () => {
   return(
@@ -31,7 +31,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/apartments",
-        element: <h1>Appartements</h1> 
+        element: <ApartmentsPage/>   //  <ApartmentsPage/>  
       },
       {
         path: "/about",
