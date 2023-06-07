@@ -3,11 +3,12 @@ import HomePage from "./pages/Homepage";
 import ApartmentsPage from "./pages/ApartmentsPage";
 import Template from "./Template/Index";
 import About from "./pages/About";
+import { ErrorPageNotFound } from "./pages/ErrorPageNotFound";
 
 export const router = createBrowserRouter([
     {
       element: <Template/>,
-      errorElement: <h1>404 not found</h1>,
+      errorElement: <ErrorPageNotFound/>,
       children: [
         {
           path: "/",
