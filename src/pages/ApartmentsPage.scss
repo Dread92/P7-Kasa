@@ -5,7 +5,9 @@
     .apartment__description__component {
         display:flex;
         gap:1rem;
-        
+        @media screen and (width<= 768px) {
+            flex-direction: column;
+        }
 
     }
     

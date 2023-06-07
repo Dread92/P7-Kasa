@@ -3,12 +3,29 @@
 .apartment__header{
         margin-bottom: 2rem;
     display: flex;
+    gap: 1rem;
+    @media screen and (width <= 768px){
+        flex-direction: column;
+    }
+        
+    
     .apartment__title{
         flex-grow: 1;
+    }
+    .apartment__owner{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @media screen and (width<= 768px) {
+            flex-direction: row;
+        }
     }
     .apartment__owner__infos{
         display: flex;
         gap:0.5rem;
+        @media screen and (width <= 768px) {
+            order:1;
+        }
         
     }
     .apartment__owner__badge{
