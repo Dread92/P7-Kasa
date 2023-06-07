@@ -1,0 +1,72 @@
+@import "../scss_variables/variables.scss";
+
+.apartment__header{
+        margin-bottom: 2rem;
+    display: flex;
+    .apartment__title{
+        flex-grow: 1;
+    }
+    .apartment__owner__infos{
+        display: flex;
+        gap:0.5rem;
+        
+    }
+    .apartment__owner__badge{
+        height:50px;
+        width:50px;
+        border-radius: 50%;
+        background-color: $grid-background-darken;
+        background-image: url("https://media.prospectmagazine.co.uk/prod/images/gm_preview/f60b0f018103-pepedankmeems420blazeitohbabyatripledankaestheticafkeepit100.jpg");
+        background-size: cover;
+        
+    }
+    .apartment__owner__stars{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:0.2rem;
+        font-size:2rem;
+        .filled{
+            color:$color-primary;
+        }
+        .empty{
+            color:$grid-background-darken;
+        }
+    }
+    h1{
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom:0;
+    } 
+    h2{
+        font-weight: 400;
+        margin-top: 0.5em;
+        margin-bottom:0.2em;
+        font-size: 20px;
+    }
+
+
+
+     .apartment__tags{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+        gap:1rem;
+        & span{
+        background-color: $color-primary;
+        color:$color-tertiary;
+        padding: 0.5em 1em;
+        border-radius: 0.7rem;
+        text-align: center;
+        }
+
+    }
+
+    h3 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        margin-bottom:0;
+        align-items: end;
+        font-weight: 400;
+    }
+}
