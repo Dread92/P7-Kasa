@@ -3,13 +3,13 @@ import "./ApartmentCard.scss";
 import { Link } from "react-router-dom";
 
 
- export function ApartmentCard() {
+ export function ApartmentCard(props) {
   return (
     <Link to ="/apartments">
+    
     <div className='apartment'>
-        
-        <div className='apartment__title'>Titre de la location</div>
-       
+    <img src={props.imageApartments} alt=''/>
+        <div className='apartment__title'>{props.title}</div>
         </div>
         </Link>
   )

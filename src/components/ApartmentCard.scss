@@ -1,15 +1,23 @@
 @import "../scss_variables/variables.scss";
 
 .apartment{
-    background-image: url("https://media.prospectmagazine.co.uk/prod/images/gm_preview/f60b0f018103-pepedankmeems420blazeitohbabyatripledankaestheticafkeepit100.jpg");
+    position: relative;
     border-radius: 1rem;
     justify-content: space-between;
     flex-basis: 30%;
     display:grid;
     align-items: end;
+    filter:brightness(80%);
     min-width: 200px;
     min-height: 200px;
     background-size: cover;
+    img{
+        width: 100%;
+        height:100%;
+        object-fit: cover;
+        border-radius: 1rem;
+        box-shadow : rgb(149 157 165/20%) 0px 8px 24px;
+    }
     @media screen and (width <= 768px){ 
         .apartment{
             flex-basis: 100%;
@@ -21,6 +29,7 @@
         margin-left:0.5rem;
         margin-bottom: 0.5rem;
         color:$color-tertiary;
+        position: absolute;
     }
 }
 
