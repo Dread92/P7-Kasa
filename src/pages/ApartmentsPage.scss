@@ -1,0 +1,13 @@
+@import "../scss_variables/variables.scss";
+
+.apartment-page{
+    color: $color-primary;
+    .apartment__description__component {
+        display:flex;
+        gap:1rem;
+        
+
+    }
+    
+}
+
