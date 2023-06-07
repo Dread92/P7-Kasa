@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import HomePage from "./pages/Homepage";
 import ApartmentsPage from "./pages/ApartmentsPage";
 import Template from "./Template/Index";
-
+import About from "./pages/About";
 
 export const router = createBrowserRouter([
     {
@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
         },
         {
           path: "/about",
-          element: <h1>A propos</h1> 
+          element: <About/>
         }
       ]
     }
