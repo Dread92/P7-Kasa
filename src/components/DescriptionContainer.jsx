@@ -1,10 +1,10 @@
 import React from "react";
-import "./ApartmentDescription.scss";
+import "./DescriptionContainer.scss";
 
 
- export function ApartmentDescription(){
+ export function DescriptionContainer(){
     return(
-        <div className='apartment__description'>
+        <div className='description__block'>
         <p className='description__title'>
             <span>Description</span>
             <i className="fa-solid fa-chevron-up"></i>

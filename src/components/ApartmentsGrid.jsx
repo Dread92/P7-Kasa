@@ -1,16 +1,15 @@
 import React from 'react';
 import "./ApartmentsGrid.scss";
-import Apartment from './ApartmentCard.jsx'
+import {ApartmentCard} from './ApartmentCard.jsx'
 
-function ApartmentsGrid() {
+export function ApartmentsGrid() {
   return (
     <div className='grid'>
-        <Apartment/>
-        <Apartment/>
-        <Apartment/>
-        <Apartment/>
+        <ApartmentCard/>
+        <ApartmentCard/>
+        <ApartmentCard/>
+        <ApartmentCard/>
     </div>
   )
 }
 
-export default ApartmentsGrid

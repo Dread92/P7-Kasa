@@ -1,14 +1,17 @@
 import React from 'react';
 import "./ApartmentCard.scss";
 import { Link } from "react-router-dom";
-function Apartment() {
+
+
+ export function ApartmentCard() {
   return (
+    <Link to ="/apartments">
     <div className='apartment'>
-      <Link to ="/apartments">
+        
         <div className='apartment__title'>Titre de la location</div>
-        </Link>
+       
         </div>
+        </Link>
   )
 }
 
-export default Apartment

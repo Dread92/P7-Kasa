@@ -1,7 +1,7 @@
 @import "../scss_variables/variables.scss";
 
 .apartment{
-    background-image: linear-gradient(to top,$color-secondary, $color-primary);
+    background-image: url("https://media.prospectmagazine.co.uk/prod/images/gm_preview/f60b0f018103-pepedankmeems420blazeitohbabyatripledankaestheticafkeepit100.jpg");
     border-radius: 1rem;
     justify-content: space-between;
     flex-basis: 30%;
@@ -9,12 +9,13 @@
     align-items: end;
     min-width: 200px;
     min-height: 200px;
+    background-size: cover;
     @media screen and (width <= 768px){ 
         .apartment{
             flex-basis: 100%;
-        }
-        
+        }    
     }
+
     & &__title{
         width:60%;
         margin-left:0.5rem;

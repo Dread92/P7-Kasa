@@ -1,7 +1,7 @@
 import React from 'react';
 import "./ApartmentsPage.scss";
-import { ApartmentDescription } from '../components/ApartmentDescription';
-import ApartmentBanner from'../components/ApartmentBanner';
+import { DescriptionContainer } from '../components/DescriptionContainer';
+import ApartmentBanner from'../components/ImageBanner';
 import {ApartmentHeader} from '../components/ApartmentHeader';
 
 
@@ -11,8 +11,8 @@ function ApartmentsPage() {
         <ApartmentBanner/>
         <ApartmentHeader/>
     <div className='apartment__description__component'>
-     <ApartmentDescription/>
-     <ApartmentDescription/>
+     <DescriptionContainer/>
+     <DescriptionContainer/>
      </div>
 </div>  
   )
