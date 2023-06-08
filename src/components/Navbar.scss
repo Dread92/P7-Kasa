@@ -20,6 +20,11 @@
     & a{
         text-decoration: none;
         color:$color-primary;
+        font-size: 24px;
+        font-weight: 400;
+        @media screen and (width<=768px) {
+            font-size: 16px;
+        }
         &.active {/* on prend une classe active grâce aux Navlink*/
             text-decoration: underline;
         }

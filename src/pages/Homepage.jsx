@@ -6,6 +6,11 @@ import {ApartmentsGrid} from '../components/ApartmentsGrid.jsx';
 import Main from '../layout/Main.jsx';
 import Footer from '../layout/Footer.jsx';
 
+
+
+
+
+
 function HomePage() {
   return (
     <>
@@ -17,4 +22,9 @@ function HomePage() {
   )
 }
 
+
+
 export default HomePage
+
+
+
