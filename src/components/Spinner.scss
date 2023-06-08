@@ -37,6 +37,9 @@
      @media screen and (width<=800px) {
       background-size: 20%;
      }
+     @media screen and (width<=500px) {
+      background-size: 30%;
+     }
       position: fixed;
       background-color: white;
       opacity: 1;
