@@ -4,8 +4,16 @@ import { Link } from "react-router-dom";
 
 
  export function ApartmentCard(props) {
+
+  const state = {
+   apartmentid:props.id
+  };
   return (
-    <Link to ="/apartments">
+    <Link
+     to ="/apartments" 
+     state = {{
+      apartmentId: props.id
+      }}>
     
     <div className='apartment'>
     <img src={props.imageApartments} alt=''/>

@@ -1,36 +1,39 @@
 import React from 'react';
 import './ApartmentHeader.scss';
 
+export function ApartmentHeader(props) {
+  const apartment = props.apartment;
+  const name = apartment.host.name;
+  const [firstName, lastName] = name.split(" ");
 
-export function ApartmentHeader() {
   return (
     <div className='apartment__header'>
-        <div className='apartment__title'>
-    <h1 className='apartment-page__title'>Cozy loft on Canal Saint-Martin</h1>
-    <h2 className='apartment-page__subtitle'>Paris, île de france</h2>
-    <div className='apartment__tags'>
-            <span >Cozy</span>
-            <span >Canal</span>
-            <span >Paris 10</span>
-            </div>
+      <div className='apartment__title'>
+        <h1 className='apartment-page__title'>{props.apartment.title}</h1>
+        <h2 className='apartment-page__subtitle'>{props.apartment.location}</h2>
+        <div className='apartment__tags'>
+          {props.apartment.tags.map((tag) => (
+            <span>{tag}</span>
+          ))}
         </div>
-        <div className='apartment__owner'>
+      </div>
+      <div className='apartment__owner'>
         <div className='apartment__owner__infos'>
-            <h3>
-                <span>Alexandre</span>
-                <span>Dumas</span>
-            </h3>
-            <div className='apartment__owner__badge'></div>
-            </div>
-            <div className='apartment__owner__stars'>
-            <span className='filled'>★</span>
-            <span className='filled'>★</span>
-            <span className='filled'>★</span>
-            <span className='empty'>★</span>
-            <span className='empty'>★</span>
-            </div>
+          <h3>
+            <span>{firstName}</span>
+            <span>{lastName}</span>
+          </h3>
+          <div className='apartment__owner__badge'>
+            <img src={apartment.host.picture} alt="" />
+          </div>
         </div>
+        <div className='apartment__owner__stars'>
+          {[1, 2, 3, 4, 5].map((number) => (
+            <span key={number} className={props.apartment.rating >= number ? "filled" : ""}>★</span>
+          ))}
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 

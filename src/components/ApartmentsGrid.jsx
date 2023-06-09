@@ -22,7 +22,7 @@ export function ApartmentsGrid() {
     <div className='grid'>
       {apartments.map((apartment) =>
        (
-        <ApartmentCard title={apartment.title} imageApartments={apartment.cover}/>
+        <ApartmentCard title={apartment.title} imageApartments={apartment.cover} id={apartment.id}/>
       )
       )
       }
