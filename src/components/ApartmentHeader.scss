@@ -15,9 +15,10 @@
     .apartment__owner{
         display:flex;
         flex-direction: column;
-        justify-content: space-between;
+       
         @media screen and (width<= 768px) {
             flex-direction: row;
+            justify-content: space-between;
         }
     }
     .apartment__owner__infos{
