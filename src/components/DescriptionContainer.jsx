@@ -2,10 +2,19 @@ import React, {useState} from "react";
 import "./DescriptionContainer.scss";
 
 
- export function DescriptionContainer(props){
+  function DescriptionContainer(props){
     const [isContentVisible, setIsContentVisible]= useState(false);
+    const [animBackClass, setAnimBackClass]= useState('');
     const displayContent = () => {
-        setIsContentVisible(!isContentVisible)
+       // setIsContentVisible(!isContentVisible)
+       if (!isContentVisible){
+        setIsContentVisible(true);
+       }else {
+        setAnimBackClass('')
+        setTimeout(() => {
+          setIsContentVisible(false)  
+        }, 3000);
+       }
     }
 
     return(
@@ -19,3 +28,6 @@ import "./DescriptionContainer.scss";
     </div>
     );
 };
+
+
+export default DescriptionContainer

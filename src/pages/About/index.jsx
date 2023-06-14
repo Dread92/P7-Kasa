@@ -1,7 +1,8 @@
 import React from 'react'
-import ApartmentBanner from '../components/ImageBanner'
-import { DescriptionContainer } from '../components/DescriptionContainer'
-import "../pages/About.scss"
+import ApartmentBanner from '../../components/ImageBanner'
+import  DescriptionContainer  from '../../components/DescriptionContainer'
+import "./About.scss"
+import Banner from '../../layout/Banner';
 
 function About() {
   return <>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./ApartmentsPage.scss";
-import { DescriptionContainer } from '../components/DescriptionContainer';
+import  DescriptionContainer  from '../components/DescriptionContainer';
 import ApartmentBanner from '../components/ImageBanner';
 import { ApartmentHeader } from '../components/ApartmentHeader';
 import { useLocation } from 'react-router-dom';
