@@ -30,16 +30,10 @@
 
 .spinner {
     animation: spin 1s linear infinite;
-      background-image: url('logokasa.png');
-      background-repeat: no-repeat;
-    background-position:  center;
-     background-size: 10%;
-     @media screen and (width<=800px) {
-      background-size: 20%;
-     }
-     @media screen and (width<=500px) {
-      background-size: 30%;
-     }
+  
+    top: 50%;
+      left: 50%;
+     
       position: fixed;
       background-color: white;
       opacity: 1;
@@ -59,6 +53,25 @@
         animation-iteration-count: 10;
       }
   }
+  .spinner img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 60px;
+    
+    animation: pulsate 1.5s ease-in-out infinite; /* Added pulsate animation */
+  
+  }
+  @keyframes pulsate {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }}
   
   @keyframes spiner {
     from {
