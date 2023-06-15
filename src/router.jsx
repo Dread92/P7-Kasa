@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import HomePage from "./pages/Homepage";
 import ApartmentsPage from "./pages/ApartmentsPage";
 import Template from "./Template/Index";
-import About from "./pages/About";
+import About from "./pages/About/index";
 import { ErrorPageNotFound } from "./pages/ErrorPageNotFound";
 
 export const router = createBrowserRouter([
