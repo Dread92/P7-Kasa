@@ -1,33 +1,24 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./DescriptionContainer.scss";
 
+function DescriptionContainer(props) {
+  const [isContentVisible, setIsContentVisible] = useState(false);
 
-  function DescriptionContainer(props){
-    const [isContentVisible, setIsContentVisible]= useState(false);
-    const [animBackClass, setAnimBackClass]= useState('');
-    const displayContent = () => {
-       // setIsContentVisible(!isContentVisible)
-       if (!isContentVisible){
-        setIsContentVisible(true);
-       }else {
-        setAnimBackClass('')
-        setTimeout(() => {
-          setIsContentVisible(false)  
-        }, 3000);
-       }
-    }
+  const toggleContentVisibility = () => {
+    setIsContentVisible(!isContentVisible);
+  };
 
-    return(
-        <div className='description__block'>
-        <p className='description__title'>
-            <span>{props.title}</span>
-            <i className="fa-solid fa-chevron-up" onClick={displayContent}></i>
-        </p>
-       {isContentVisible && <p className='description__content'>{props.content}               
-        </p>}
+  return (
+    <div className="description__block">
+      <p className={`description__title ${isContentVisible ? "active" : ""}`} onClick={toggleContentVisibility}>
+        <span>{props.title}</span>
+        <i className="fa-solid fa-chevron-up"></i>
+      </p>
+      {isContentVisible && (
+        <p className="description__content">{props.content}</p>
+      )}
     </div>
-    );
-};
+  );
+}
 
-
-export default DescriptionContainer
+export default DescriptionContainer;

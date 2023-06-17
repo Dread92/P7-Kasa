@@ -2,14 +2,14 @@ import React from 'react'
 import './ImageBanner.scss'
 
 
- function ImageBanner(props) {
+ function AboutBanner(props) {
   
 
   return (
     <div className='banner__img'>
-    <img src={props.imageUrl} alt=""/>
+    <img src="aboutimg.png" alt=""/>
 </div>
   );
 }
 
-export default ImageBanner
+export default AboutBanner

@@ -1,41 +1,41 @@
 @import "../scss_variables/variables.scss";
 
-.description__block{
-    margin-bottom: 1rem;
-    flex-basis:50%;
-    p{
-        margin-block:0;
-    }
+.description__block {
+  margin-bottom: 1rem;
+  flex-basis: 50%;
+  overflow: hidden;
 
-    .description__title{
+  p {
+    margin-block: 0;
+  }
+
+  .description__title {
+    cursor: pointer;
+    user-select: none;
     background-color: $color-primary;
-    color:$color-tertiary;
-    padding:0.2em 1em;
+    color: $color-tertiary;
+    padding: 0.2em 1em;
     border-radius: 0.7rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     i {
-        font-size:2rem;
-        cursor: pointer;
+      font-size: 2rem;
+      cursor: pointer;
     }
-}
-.description__content{
-    background-color: $background-light ;
-    color:$color-primary;
-    padding:1rem;
+  }
+
+  .description__content {
+    overflow: hidden;
+    background-color: $background-light;
+    color: $color-primary;
+    padding: 1rem;
     border-radius: 0.7rem;
-    position:relative;
-    top:-0.3rem;
-    z-index:-1;
-    animation: slide-in-out 0.5s ease-in-out;
-}
-@keyframes slide-in-out {
-    0%{
-        transform: translateY(-100%);
-    }
-    100%{
-        transform:translateX(0);
-    }
-}
+    position: relative;
+  }
+
+  .description__title.active .fa-chevron-up {
+    transform: rotate(180deg);
+  }
 }
