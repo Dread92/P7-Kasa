@@ -2,8 +2,26 @@
 
 .banner__img {
   margin-bottom: 2rem;
-  
+  position: relative;
+  .button{
+    cursor: pointer;
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:5rem;
+    background-color: transparent;
+    color:$color-tertiary;
+    font-size:3rem;
+    border-width: 0;
+}
+  .button-next{
+    right:0;
 
+  }
+  .button-previous{
+    left:0;
+    
+  }
 
 
     .image__container{
@@ -21,9 +39,12 @@
     border-radius: 1rem;
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
     opacity: 0;
-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
     &.show {
       opacity: 1;
     }
-  }}
+    
+  }
+
+}
 }

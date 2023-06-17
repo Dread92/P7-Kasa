@@ -35,8 +35,8 @@ const moveToPrevious = () =>{
         <img key={pic} src={pic} alt='' className={getClassName(i)} />
       ))}
       </div>
-      < button onClick={moveToPrevious}>Previous</button>
-      <button onClick={moveToNext}>Next</button>
+      < button className='button button-previous' onClick={moveToPrevious}><i className="fas fa-chevron-left"></i></button>
+      <button className='button button-next' onClick={moveToNext}><i className="fas fa-chevron-right"></i></button>
        
     </div>
   );
