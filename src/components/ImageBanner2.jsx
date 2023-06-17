@@ -1,5 +1,5 @@
 import React from 'react'
-import './ImageBanner.scss'
+import './ImageBanner2.scss'
 
 
  function AboutBanner(props) {
