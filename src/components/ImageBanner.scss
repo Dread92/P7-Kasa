@@ -1,14 +1,29 @@
-
 @import "../scss_variables/variables.scss";
 
-.banner__img{
-    margin-bottom:2rem;
-img{
-    width:100%;
+.banner__img {
+  margin-bottom: 2rem;
+  
+
+
+
+    .image__container{
+  
+        height: 20rem;
+        width: 100%;
+        position: relative;
+    
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     height: 20rem;
     object-fit: cover;
     border-radius: 1rem;
-    box-shadow:rgb(149 157 165 / 20%) 0px 8px 24px;
-} 
-
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    opacity: 0;
+transition: opacity 0.5s ease-in-out;
+    &.show {
+      opacity: 1;
+    }
+  }}
 }
