@@ -31,7 +31,7 @@ function ApartmentsPage() {
     <div className='apartment-page'>
       {selectedApartment && (
         <>
-          <ApartmentBanner imageUrl={selectedApartment.cover} />
+          <ApartmentBanner pictures={selectedApartment.pictures}/>
           <ApartmentHeader apartment={selectedApartment} />
         </>
       )}
@@ -42,8 +42,8 @@ function ApartmentsPage() {
             {selectedApartment.equipments && (
               <DescriptionContainer
                 title="Equipments"
-                content={selectedApartment.equipments.map((equipment) => (
-                  <li key={equipment}>{equipment}</li>
+                content={selectedApartment.equipments.map((equipment, i) => (
+                  <li key={i}>{equipment}</li>
                 ))}
               />
             )}
