@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./ApartmentsGrid.scss";
-import {ApartmentCard} from './ApartmentCard.jsx'
+import {ApartmentCard} from '../ApartmentCard/index'
 
 
 
@@ -29,4 +29,3 @@ export function ApartmentsGrid() {
     </div>
   )
 }
-
