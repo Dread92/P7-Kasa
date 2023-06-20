@@ -1,15 +1,17 @@
 import React from 'react';
 import "./Banner.scss";
 
-function Banner() {
+function Banner(props) {
+  const {text, image, style,imageAlt }= props
   return (
-    <div className='banner'>
-     
-        <h2>Chez vous, partout et ailleurs</h2>
+    <div className={ `banner ${style}`}>
+        
+        <img src={image } alt={imageAlt}className="banner-image"></img>
+        {text && <h2 className='banner-title'>{text}</h2>}
     </div>
   )
 }
-
+// home page export
 export default Banner
 
 

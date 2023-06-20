@@ -2,10 +2,12 @@ import React from 'react';
 import './ApartmentHeader.scss';
 
 export function ApartmentHeader(props) {
-  const apartment = props.apartment; // Récupération de la propriété "apartment" à partir des props
+  const {apartment} = props; // Récupération de la propriété "apartment" à partir des props
   const name = apartment.host.name; // Récupération du nom du propriétaire de l'appartement
   const [firstName, lastName] = name.split(" "); // Découpage du nom complet en prénom et nom de famille
 
+
+  // composants séparés ( apartment owner)
   return (
     <div className='apartment__header'>
       <div className='apartment__title'> 

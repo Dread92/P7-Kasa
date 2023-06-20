@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./ApartmentsPage.scss";
-import DescriptionContainer from '../../components/DescriptionContainer/index';
-import ApartmentBanner from '../../components/ImageBanner';
+import DropDown from '../../components/DropDown/index';
+import ApartmentBanner from '../../components/Carousel';
 import { ApartmentHeader } from '../../components/ApartmentHeader';
 import { useLocation } from 'react-router-dom';
 
@@ -39,9 +39,9 @@ function ApartmentsPage() {
       <div className='apartment__description__component'>
         {selectedApartment && (
           <>
-            <DescriptionContainer title="Description" content={selectedApartment.description} /> 
+            <DropDown title="Description" content={selectedApartment.description} /> 
             {selectedApartment.equipments && (
-              <DescriptionContainer
+              <DropDown
                 title="Equipments"
                 content={selectedApartment.equipments.map((equipment, i) => (
                   <li key={i}>{equipment}</li>

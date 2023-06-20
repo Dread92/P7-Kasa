@@ -2,23 +2,22 @@ import React from 'react';
 import "./Homepage.scss";
 import Banner from '../../layout/Banner/index';
 import {ApartmentsGrid} from '../../components/ApartmentsGrid/index';
+import bgHome from "../../assets/bannerimg.png"
 
 
 
 
 
-
-
+// pareil sur about
 function HomePage() {
   return (
     <>
-       
-       <Banner/>
+       <Banner image={bgHome} imageAlt="banner img" text="Chez vous, partout et ailleurs"/>
        <ApartmentsGrid/>
-      
     </>
   )
 }
+
 
 
 
