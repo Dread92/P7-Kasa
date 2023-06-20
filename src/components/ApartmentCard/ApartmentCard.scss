@@ -4,13 +4,12 @@
     position: relative;
     border-radius: 1rem;
     justify-content: space-between;
-    flex-basis: 30%;
+    
     display:grid;
     align-items: end;
     
     min-width: 200px;
     min-height: 200px;
-    background-size: cover;
     img{
         filter:brightness(75%);
         transition: 100ms;
