@@ -2,6 +2,11 @@
 
 
 .navbar {
+    .logo{
+        @media screen and (width <= 768px){
+            width:100px;
+        }
+    }
     padding: 2rem 20rem;
     @media screen and (width <= 1600px) {
         padding: 2rem 10rem;
@@ -21,6 +26,7 @@
     @media screen and (width<=768px) {
         text-transform: uppercase;
         font-weight: 400;
+       
     }
     /* enfants directs de Navbar*/
     & > *:first-child{
@@ -33,7 +39,8 @@
         font-size: 24px;
         font-weight: 400;
         @media screen and (width<=768px) {
-            font-size: 16px;
+            font-size: 13px;
+            
         }
         &.active {/* on prend une classe active grâce aux Navlink*/
             text-decoration: underline;
@@ -42,6 +49,7 @@
             text-decoration: underline;
         }
         }
+       
 }
 
 
