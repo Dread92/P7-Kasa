@@ -18,10 +18,14 @@
     }
 }
 
-@media screen and (width <= 768px) {
+@media screen and (width <= 800px) {
     .grid{
+         display: flex;
+         
+
         justify-content: center;
         background-color: $grid-background-lighter;
-        padding:0;
+        
+       
     }
 }

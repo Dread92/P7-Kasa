@@ -2,12 +2,13 @@
    padding: 2rem 20rem;
    min-height: 80vh;
    @media screen and (width <= 1600px) {
-      padding: 2rem 10rem;
-   }
-   @media screen and (width <= 1400px) {
       padding: 2rem 5rem;
    }
-   @media screen and (width <= 768px) {
+   @media screen and (width <= 1400px) {
+      padding: 2rem 3rem;
+   }
+ 
+   @media screen and (width <= 500px) {
       padding:1rem;
    }
 
