@@ -8,7 +8,6 @@ import bgHome from "../../assets/bannerimg.png"
 
 
 
-// pareil sur about
 function HomePage() {
   return (
     <>
