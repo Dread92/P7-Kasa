@@ -1,5 +1,6 @@
 import React from 'react'
 import './ImageBanner2.scss'
+import aboutimg from '../../assets/aboutimg.png';
 
 
  function AboutBanner(props) {
@@ -7,7 +8,7 @@ import './ImageBanner2.scss'
 
   return (
     <div className='banner__img'>
-    <img src="aboutimg.png" alt=""/>
+    <img src={aboutimg} alt=""/>
 </div>
   );
 }
