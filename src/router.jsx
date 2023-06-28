@@ -6,22 +6,22 @@ import About from "./pages/About/index";
 import { ErrorPageNotFound } from "./pages/ErrorPageNotFound";
 
 export const router = createBrowserRouter([
-    {
-      element: <Template/>,
-      errorElement: <ErrorPageNotFound/>,
-      children: [
-        {
-          path: "/",
-          element: <HomePage/>
-        },
-        {
-          path: "/apartments",
-          element: <ApartmentsPage/>   //  <ApartmentsPage/>  
-        },
-        {
-          path: "/about",
-          element: <About/>
-        }
-      ]
-    }
-  ]);
+  {
+    element: <Template />,
+    errorElement: <ErrorPageNotFound />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />
+      },
+      {
+        path: "/apartments",
+        element: <ApartmentsPage />   //  <ApartmentsPage/>  
+      },
+      {
+        path: "/about",
+        element: <About />
+      }
+    ]
+  }
+]);

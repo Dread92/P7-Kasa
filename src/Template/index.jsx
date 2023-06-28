@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Footer from '../layout/Footer';
 import Navbar from '../components/Navbar';
 import Main from '../layout/Main';
-import {Spinner} from '../components/Spinner';
+import { Spinner } from '../components/Spinner';
 
 const Template = () => {
   const [isLoading, setIsLoading] = useState(true);

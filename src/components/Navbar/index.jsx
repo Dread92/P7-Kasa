@@ -9,14 +9,14 @@ function Navbar() {
     <nav className="navbar">
       <NavLink to="/">
         <div className='navbar__logo'>
-          <img src ={logokasa} alt="Logo" className='logo' /> 
+          <img src={logokasa} alt="Logo" className='logo' />
         </div>
       </NavLink>
       <NavLink to="/">
-        <div>Accueil</div> 
+        <div>Accueil</div>
       </NavLink>
       <NavLink to="/about">
-        <div>A propos</div> 
+        <div>A propos</div>
       </NavLink>
     </nav>
   )

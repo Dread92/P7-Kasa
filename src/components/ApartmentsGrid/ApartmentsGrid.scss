@@ -1,31 +1,31 @@
-
 @import "../../scss_variables/variables.scss";
 
 
-.grid{
+.grid {
     background-color: $grid-background-darken;
-    min-height: 50vh ;
+    min-height: 50vh;
     border-radius: 2rem;
     display: flex;
     flex-wrap: wrap;
-    gap:3rem;
+    gap: 3rem;
     padding: 1rem;
-    justify-content:space-evenly;
-    & > * {
-        width:100%;
-        max-width:20rem;
-        
+    justify-content: space-evenly;
+
+    &>* {
+        width: 100%;
+        max-width: 20rem;
+
     }
 }
 
-@media screen and (width <= 800px) {
-    .grid{
-         display: flex;
-         
+@media screen and (width <=800px) {
+    .grid {
+        display: flex;
+
 
         justify-content: center;
         background-color: $grid-background-lighter;
-        
-       
+
+
     }
 }

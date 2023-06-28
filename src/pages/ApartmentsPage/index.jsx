@@ -32,20 +32,20 @@ function ApartmentsPage() {
     <div className='apartment-page'>
       {selectedApartment && (
         <>
-          <ApartmentBanner pictures={selectedApartment.pictures} /> 
-          <ApartmentHeader apartment={selectedApartment} /> 
+          <ApartmentBanner pictures={selectedApartment.pictures} />
+          <ApartmentHeader apartment={selectedApartment} />
         </>
       )}
       <div className='apartment__description__component'>
         {selectedApartment && (
           <>
-            <DropDown title="Description" content={selectedApartment.description} /> 
+            <DropDown title="Description" content={selectedApartment.description} />
             {selectedApartment.equipments && (
               <DropDown
                 title="Equipments"
                 content={selectedApartment.equipments.map((equipment, i) => (
                   <li key={i}>{equipment}</li>
-                ))} 
+                ))}
               />
             )}
           </>

@@ -1,36 +1,41 @@
 @import "../../scss_variables/variables.scss";
-body{
-    margin:0;
-    padding:0;
+
+body {
+    margin: 0;
+    padding: 0;
     font-family: "Roboto", sans-serif;
 }
-.spinningloader{
+
+.spinningloader {
     position: fixed;
     background-color: #F3F3F3;
     opacity: 0.9;
     z-index: 1;
-    inset: 0 0 0 0; 
+    inset: 0 0 0 0;
     animation: spinner 150ms forwards;
     animation-delay: 5s;
     display: grid;
     place-items: center;
-    &::after{
-      content:"";
-      height:100px;
-      width:100px;
-      border-top: 8px solid $color-primary;
-      border-radius:50%;
-      animation : spin 3s ease-in-out;
-      animation-iteration-count: 2;
-}}
 
-@keyframes spinner{
-    from{
+    &::after {
+        content: "";
+        height: 100px;
+        width: 100px;
+        border-top: 8px solid $color-primary;
+        border-radius: 50%;
+        animation: spin 3s ease-in-out;
+        animation-iteration-count: 2;
+    }
+}
+
+@keyframes spinner {
+    from {
         opacity: 1;
     }
-    to{
+
+    to {
         opacity: 0;
         z-index: -1;
         display: none;
     }
-  }
+}

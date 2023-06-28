@@ -1,59 +1,59 @@
 @import "../../scss_variables/variables.scss";
 
-.apartment{
+.apartment {
     position: relative;
     border-radius: 1rem;
     justify-content: space-between;
-    
-    display:grid;
+
+    display: grid;
     align-items: end;
-    
+
     min-width: 200px;
     min-height: 200px;
-    img{
-        filter:brightness(75%);
+
+    img {
+        filter: brightness(75%);
         transition: 100ms;
-        &:hover{
+
+        &:hover {
             filter: brightness(100%);
             transition: 100ms;
             transform: scale(1.05);
         }
+
         width: 320px;
         height:240px;
         object-fit: cover;
         border-radius: 1rem;
         box-shadow : rgb(149 157 165/20%) 0px 8px 24px;
     }
-    @media screen and (width <= 768px){ 
-        .apartment{
+
+    @media screen and (width <=768px) {
+        .apartment {
             flex-basis: 100%;
-           
-        }    
+
+        }
     }
 
-    & &__title{
-        width:60%;
-        margin-left:0.5rem;
+    & &__title {
+        width: 60%;
+        margin-left: 0.5rem;
         margin-bottom: 0.5rem;
-        color:$color-tertiary;
+        color: $color-tertiary;
         position: absolute;
         background-color: rgba($color-primary, 0.6);
         border-radius: 10px;
-       padding-left: 1em;
-       height:20%;
-       display: flex;
-       padding-top:0.5em;
-  
-       
+        padding-left: 1em;
+        height: 20%;
+        display: flex;
+        padding-top: 0.5em;
+
+
     }
 }
 
-.apartment a{
-text-decoration: none;
-color:#ff6060;
+.apartment a {
+    text-decoration: none;
+    color: #ff6060;
 
 }
-
-
-
-

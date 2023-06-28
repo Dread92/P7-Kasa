@@ -2,54 +2,63 @@
 
 
 .navbar {
-    .logo{
-        @media screen and (width <= 768px){
-            width:100px;
+    .logo {
+        @media screen and (width <=768px) {
+            width: 100px;
         }
     }
+
     padding: 2rem 20rem;
-    @media screen and (width <= 1600px) {
+
+    @media screen and (width <=1600px) {
         padding: 2rem 10rem;
-     }
-     @media screen and (width <= 1400px) {
+    }
+
+    @media screen and (width <=1400px) {
         padding: 2rem 5rem;
-     }
-     @media screen and (width <= 768px) {
-        padding:1rem;
-     }
+    }
+
+    @media screen and (width <=768px) {
+        padding: 1rem;
+    }
+
     display: flex;
     align-items: center;
-    
+
     color: $color-primary;
     font-weight: 700;
     gap:2rem;
+
     @media screen and (width<=768px) {
         text-transform: uppercase;
         font-weight: 400;
-       
-    }
-    /* enfants directs de Navbar*/
-    & > *:first-child{
-    margin-right:auto;
-}
 
-    & a{
+    }
+
+    /* enfants directs de Navbar*/
+    &>*:first-child {
+        margin-right: auto;
+    }
+
+    & a {
         text-decoration: none;
-        color:$color-primary;
+        color: $color-primary;
         font-size: 24px;
         font-weight: 400;
+
         @media screen and (width<=768px) {
             font-size: 13px;
-            
+
         }
-        &.active {/* on prend une classe active grâce aux Navlink*/
+
+        &.active {
+            /* on prend une classe active grâce aux Navlink*/
             text-decoration: underline;
         }
-        &:hover{
+
+        &:hover {
             text-decoration: underline;
         }
-        }
-       
+    }
+
 }
-
-
