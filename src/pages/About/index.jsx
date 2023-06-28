@@ -1,11 +1,14 @@
 import React from 'react'
-import AboutBanner from '../../components/ImageBanner2'
+
 import  DropDown  from '../../components/DropDown'
 import "./About.scss"
+import Banner from '../../layout/Banner'
+import aboutimg from'../../assets/aboutimg.png'
+
 
 function About() {
   return <>
-  <AboutBanner />
+  <Banner image= {aboutimg} style="banner__img"/>
   <div className='container__about'>
   <DropDown title="Fiabilité" content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."/>
   <DropDown title="Respect" content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."/>
