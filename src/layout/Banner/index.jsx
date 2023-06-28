@@ -2,12 +2,12 @@ import React from 'react';
 import "./Banner.scss";
 
 function Banner(props) {
-  const {text, image, style,imageAlt }= props
+  /* const {text, image, style,imageAlt }= props */
   return (
-    <div className={ `banner ${style}`}>
+    <div className = { `banner ${props.style}`}>
         
-        <img src={image } alt={imageAlt}className="banner-image"></img>
-        {text && <h2 className='banner-title'>{text}</h2>}
+        <img src={props.image } alt={props.imageAlt} className="banner-image"></img>
+        {props.text && <h2 className='banner-title'>{props.text}</h2>}
     </div>
   )
 }
