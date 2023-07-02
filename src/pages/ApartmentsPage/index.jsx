@@ -6,17 +6,22 @@ import { ApartmentHeader } from '../../components/ApartmentHeader';
 import { useLocation } from 'react-router-dom';
 
 function ApartmentsPage() {
-  const location = useLocation(); // Obtenir la localisation à partir de React Router
+  const location = useLocation();/* La fonction useLocation est utilisée pour obtenir la localisation à partir de React Router. 
+  La valeur de la localisation est stockée dans la variable location. */
   console.log("location", location);
   console.log("our apartment id is:", location.state.apartmentId);
 
   const [selectedApartment, setselectedApartment] = useState(null); // usestate pour stocker l'appartement sélectionné
 
-  useEffect(() => {
+  useEffect(() => {//Le useEffect est utilisé pour exécuter la fonction fetchApartmentApi lors du chargement initial de la page.
     fetchApartmentApi();
   }, []);
 
-  // Fonction pour récupérer les données de l'API d'appartement
+  /* fetchApartmentApi est définie pour récupérer les données de l'API d'appartement.
+   Une requête est effectuée pour récupérer les données du fichier JSON api.json. 
+   Les données sont converties en format JSON, puis l'appartement correspondant à l'ID spécifié 
+   dans location.state.apartmentId est extrait des données de l'API.
+   L'appartement sélectionné est mis à jour dans l'état local à l'aide de setselectedApartment.  */
   function fetchApartmentApi() {
     fetch("api.json") // Effectuer une requête pour récupérer les données de l'API (fichier JSON)
       .then((res) => res.json()) // Convertir la réponse en format JSON
@@ -31,6 +36,11 @@ function ApartmentsPage() {
   return (
     <div className='apartment-page'>
       {selectedApartment && (
+
+        /*Si selectedApartment est défini, les composants ApartmentBanner et ApartmentHeader sont rendus. 
+        Ces composants sont utilisés pour afficher la bannière et l'en-tête de l'appartement respectivement. 
+        Les propriétés pictures et apartment sont passées aux composants correspondants.*/
+
         <>
           <ApartmentBanner pictures={selectedApartment.pictures} />
           <ApartmentHeader apartment={selectedApartment} />
@@ -39,6 +49,8 @@ function ApartmentsPage() {
       <div className='apartment__description__component'>
         {selectedApartment && (
           <>
+          {/*La propriété content est définie comme un tableau généré en utilisant selectedApartment.equipments.map. 
+          Pour chaque élément equipment dans le tableau des équipements de l'appartement, une balise li est créée avec equipment */}
             <DropDown title="Description" content={selectedApartment.description} />
             {selectedApartment.equipments && (
               <DropDown

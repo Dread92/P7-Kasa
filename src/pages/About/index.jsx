@@ -5,7 +5,7 @@ import "./About.scss"
 import Banner from '../../layout/Banner'
 import aboutimg from '../../assets/aboutimg.png'
 
-
+// on importe tout nos composants nécessaires à la création de la page A propos.
 function About() {
   return <>
     <Banner image={aboutimg} style="banner__img" />
