@@ -14,8 +14,8 @@ export function ApartmentHeader(props) {
         <h1 className='apartment-page__title'>{props.apartment.title}</h1> {/* Affichage du titre de l'appartement*/}
         <h2 className='apartment-page__subtitle'>{props.apartment.location}</h2> {/* Affichage de l'emplacement de l'appartement*/}
         <div className='apartment__tags'>
-          {props.apartment.tags.map((tag) => (//La méthode map est utilisée pour itérer sur le tableau props.apartment.tags, et pour chaque tag, un élément span est rendu pour afficher le contenu du tag.
-            <span>{tag}</span> //Affichage de chaque tag associé à l'appartement
+          {props.apartment.tags.map((tag, index) => (//La méthode map est utilisée pour itérer sur le tableau props.apartment.tags, et pour chaque tag, un élément span est rendu pour afficher le contenu du tag.
+            <span key={index}>{tag}</span> //Affichage de chaque tag associé à l'appartement
           ))}
         </div>
       </div>

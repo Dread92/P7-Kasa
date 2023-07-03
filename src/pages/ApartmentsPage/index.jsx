@@ -8,8 +8,7 @@ import { useLocation } from 'react-router-dom';
 function ApartmentsPage() {
   const location = useLocation();/* La fonction useLocation est utilisée pour obtenir la localisation à partir de React Router. 
   La valeur de la localisation est stockée dans la variable location. */
-  console.log("location", location);
-  console.log("our apartment id is:", location.state.apartmentId);
+
 
   const [selectedApartment, setselectedApartment] = useState(null); // usestate pour stocker l'appartement sélectionné
 
@@ -27,7 +26,7 @@ function ApartmentsPage() {
       .then((res) => res.json()) // Convertir la réponse en format JSON
       .then((apartments) => {
         const selectedApartment = apartments.find((apartment) => apartment.id === location.state.apartmentId); // Trouver l'appartement correspondant à l'ID dans les données de l'API
-        console.log("selectedApartment", selectedApartment);
+       
         setselectedApartment(selectedApartment); // Mettre à jour l'état avec l'appartement sélectionné
       })
       .catch(console.error);
