@@ -39,7 +39,7 @@ function Carousel(props) { //composant fonctionnel nommé Carousel qui accepte p
       <div className='image__container'> {/* Une balise <img> pour chaque image du tableau pictures,
        avec une classe CSS définie dynamiquement à l'aide de getClassName(i) pour contrôler la visibilité en fonction de l'état selectedPicture. */}
         {pictures.map((pic, i) => (
-          <img key={pic} src={pic} alt='apartment image' className={getClassName(i)} />
+          <img key={pic} src={pic} alt= {`apartment image ${pic}`} className={getClassName(i)} />
         ))}
       </div>
       <div className='image__counter'>{imageCounter}</div> {/* Display the image counter */}
