@@ -14,7 +14,7 @@ function DropDown(props) {
         {/* Si open est true, le contenu de la description est affiché à l'aide d'un élément p avec la classe CSS "description__content".
        Le contenu est obtenu à partir de props.content. */}
         <span>{props.title}</span> {/* Affichage du titre de la description*/}
-        <i className="fa-solid fa-chevron-up"></i>
+        <i className="fa-solid fa-chevron-down"></i>
       </p>
       {open && (
         <p className="description__content">{props.content}</p> // Affichage du contenu si la visibilité est activée
