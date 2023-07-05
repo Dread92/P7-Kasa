@@ -7,11 +7,11 @@ export function ApartmentCard(props) {
 
   return (
     <Link
-      to="/apartments"
-      state={{
-        apartmentId: id
-      }}
-    >
+  to={`/apartments/${id}`} // Use the actual apartment ID in the URL
+  state={{
+    apartmentId: id
+  }}
+>
       <div className='apartment'>
         <img src={imageApartments} alt={title} />
         <div className='gradient-overlay'></div>

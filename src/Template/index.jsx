@@ -12,7 +12,7 @@ const Template = () => {
     // Simulating a delay or asynchronous operation
     setTimeout(() => {
       setIsLoading(false);
-    }, 5000); // Example: Setting isLoading to false after 5seconds
+    }, 1000); // Example: Setting isLoading to false after 5seconds
   }, []);
 
   return (

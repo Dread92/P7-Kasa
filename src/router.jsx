@@ -10,20 +10,24 @@ import { ErrorPageNotFound } from "./pages/ErrorPageNotFound";
 export const router = createBrowserRouter([
   {
     element: <Template />,
-    errorElement: <ErrorPageNotFound />,//représente la racine de l'application et utilise un composant <Template /> comme élément.
-    // Si une erreur se produit lors de l'affichage de cette route, le composant <ErrorPageNotFound /> sera affiché à la place.
-    children: [ // liste d'enfants qui représentent les différentes routes de l'application.
+    errorElement: <ErrorPageNotFound />,
+    children: [
       {
         path: "/",
         element: <HomePage />
       },
       {
-        path: "/apartments",
-        element: <ApartmentsPage />  
+        path: "/apartments/:apartmentId",
+        element: <ApartmentsPage />
       },
       {
         path: "/about",
         element: <About />
+      },
+      // Add a catch-all route to handle incorrect apartmentId paths
+      {
+        path: "/apartments/*",
+        element: <ErrorPageNotFound />
       }
     ]
   }
