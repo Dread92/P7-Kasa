@@ -35,7 +35,7 @@
         
        
           filter: brightness(100%);
-          transform: scale(1.05);
+         
        
       }
     }
@@ -43,21 +43,22 @@
     &:hover {
       img {
         filter: brightness(100%);
-        transform: scale(1.05);
+        
       }
     }
   
-    &__title {
-      width: 60%;
-      margin-left: 0.5rem;
-      margin-bottom: 0.5rem;
-      color: $color-tertiary;
-      position: absolute;
-      border-radius: 10px;
-      padding-left: 1em;
-      height: 20%;
-      display: flex;
-      padding-top: 0.5em;
-    }
+  }
+
+  .apartment__titlecard{
+    width: 60%;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: $color-tertiary;
+    position: absolute;
+    border-radius: 10px;
+    padding-left: 1em;
+    height: 20%;
+    display: flex;
+    padding-top: 0.5em;
   }
   

@@ -15,7 +15,7 @@ export function ApartmentCard(props) {
       <div className='apartment'>
         <img src={imageApartments} alt={title} />
         <div className='gradient-overlay'></div>
-        <div className='apartment__title'>{title}</div>
+        <div className='apartment__titlecard'>{title}</div>
       </div>
     </Link>
   );
